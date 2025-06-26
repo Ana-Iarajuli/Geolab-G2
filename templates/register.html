@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %} Registration Page {% endblock %}
+
+{% block content %}
+<form class="p-5" method="post" enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+    {% for errors in form.errors.values() %}
+    <div class="alert alert-danger">
+        {% for error in errors %}
+            {{ error }}
+        {% endfor %}
+    </div>
+    {% endfor %}
+    <div class="mb-3 row">
+        {{ form.username(class="form-control", placeholder=form.username.label.text) }}
+    </div>
+    <div class="mb-3 row">
+        {{ form.password(class="form-control", placeholder=form.password.label.text) }}
+    </div>
+    <div class="mb-3 row">
+        {{ form.confirm_password(class="form-control", placeholder=form.confirm_password.label.text) }}
+    </div>
+
+    <div class="mb-3 row">
+        {{ form.submit(class="btn bg-purple", placeholder=form.submit.label.text) }}
+    </div>
+</form>
+{% endblock %}

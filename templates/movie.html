@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %} {{ movie['name'] }} {% endblock %}
+
+{% block content %}
+<div class="container marketing mt-5">
+    <div class="row">
+        <div class="col-lg-4">
+            <img src="/static/images/{{ movie['image'] }}"
+                 width="140"
+                 alt="ragaca movie">
+            <h2>{{ movie['name'] }}</h2>
+            <h5>Release Year: {{ movie['release_year'] }}</h5>
+            <p>Some representative placeholder content for the three columns of text below the carousel. This is the
+                first column.</p>
+            <a href="https://www.google.com/search?q=rembo&oq=rembo&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIHCAEQLhiABDIMCAIQABgKGMkDGIAEMgcIAxAuGIAEMgkIBBAAGAoYgAQyDQgFEAAYkgMYgAQYigUyCQgGEC4YChiABDIGCAcQRRg90gEIMTUxMWowajeoAgiwAgE&sourceid=chrome&ie=UTF-8">view details</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
