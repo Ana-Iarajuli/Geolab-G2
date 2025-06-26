@@ -35,6 +35,10 @@ def logout():
     return redirect("/")
 
 
+@app.route("/about")
+def about():
+    return "About Page"
+
 @app.route("/register", methods=["get", "post"])
 def register():
     form = RegisterForm()
